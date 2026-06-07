@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Ghép Hình — Câu Đố Xanh</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Ghép Hình 2 — Câu Đố Xanh</title>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <div class="app">
     <div class="loading-screen" id="loadingScreen">
       <div class="loading-spinner"></div>
-      <p class="loading-text">Đang tải câu đố...</p>
+      <p class="loading-text">Đang tải câu đố 2...</p>
     </div>
 
     <div class="game-wrapper hidden" id="gameWrapper">
@@ -18,8 +18,8 @@
         <div class="header__brand">
           <span class="header__icon" aria-hidden="true">🧩</span>
           <div>
-            <h1 class="header__title">Ghép Hình</h1>
-            <p class="header__subtitle">Kéo giữa để di chuyển · kéo đầu hoặc đuôi mảnh để xoay</p>
+            <h1 class="header__title">Ghép Hình 2</h1>
+            <p class="header__subtitle">Kéo các mảnh lên lớp nền cố định và căn chỉnh bằng mắt</p>
           </div>
         </div>
         <div class="timer" id="timer" aria-live="polite">
@@ -28,7 +28,6 @@
         </div>
       </header>
 
-      <!-- Sân chơi full-width: khay trái | khung đen | khay phải -->
       <main class="play-arena" id="playSurface">
         <div class="drag-layer" id="dragLayer" aria-hidden="true"></div>
 
@@ -36,11 +35,12 @@
 
         <section class="board-section" aria-label="Khu vực ghép hình">
           <div class="puzzle-board" id="puzzleBoard">
+            <!-- Lớp nền cố định — không kéo được -->
             <img
-              class="hint-image"
-              id="hintImage"
-              src="caudo1_0005_khoa.png"
-              alt="Gợi ý hình hoàn chỉnh"
+              class="board-base"
+              id="boardBase"
+              src="cau1/caudo1_0003_Layer-1.png"
+              alt="Lớp nền cố định"
               draggable="false"
             >
           </div>
@@ -50,12 +50,9 @@
       </main>
 
       <footer class="controls">
-        <a class="btn btn--secondary" href="anh-game-2/index.html">Câu 2 →</a>
+        <a class="btn btn--secondary" href="../index.html">← Câu 1</a>
         <button class="btn btn--primary" id="btnRestart" type="button">
           <span aria-hidden="true">↺</span> Chơi lại
-        </button>
-        <button class="btn btn--secondary" id="btnHint" type="button">
-          <span aria-hidden="true">💡</span> Gợi ý
         </button>
       </footer>
     </div>

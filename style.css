@@ -225,6 +225,18 @@ body {
   opacity: 0.38;
 }
 
+/* Lớp nền cố định (game 2) */
+.board-base {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
 /* ===== Mảnh ghép ===== */
 .puzzle-piece {
   position: absolute;
@@ -296,6 +308,7 @@ body {
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow var(--transition), background var(--transition);
+  text-decoration: none;
 }
 
 .btn:active {
