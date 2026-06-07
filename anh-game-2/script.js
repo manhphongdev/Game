@@ -7,7 +7,7 @@
  * ============================================================
  */
 
-const ASSET_BASE = 'cau1/';
+const ASSET_BASE = '/anh-game-2/cau1/';
 const FIXED_LAYER = `${ASSET_BASE}caudo1_0003_Layer-1.png`;
 
 const PUZZLE_PIECES = [

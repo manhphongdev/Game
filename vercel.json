@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/thu-thach-1", "destination": "/demo1.html" },
+    { "source": "/thu-thach-2", "destination": "/anh-game-2/index.html" },
+    { "source": "/thu-thach-3", "destination": "/game.html?game=game-3" },
+    { "source": "/thu-thach-4", "destination": "/game.html?game=game-4" },
+    { "source": "/thu-thach-5", "destination": "/game.html?game=game-5" },
+    { "source": "/thu-thach-6", "destination": "/game.html?game=game-6" },
+    { "source": "/thu-thach-7", "destination": "/game.html?game=game-7" },
+    { "source": "/thu-thach-8", "destination": "/game.html?game=game-8" },
+    { "source": "/thu-thach-9", "destination": "/game.html?game=game-9" },
+    { "source": "/vong-2", "destination": "/round2.html" }
+  ]
+}

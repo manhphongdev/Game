@@ -2,67 +2,73 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Ghép Hình — Câu Đố Xanh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tinh Thần Yêu Nước Thời Đại Mới</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="app">
-    <div class="loading-screen" id="loadingScreen">
-      <div class="loading-spinner"></div>
-      <p class="loading-text">Đang tải câu đố...</p>
-    </div>
-
-    <div class="game-wrapper hidden" id="gameWrapper">
-      <header class="header">
-        <div class="header__brand">
-          <span class="header__icon" aria-hidden="true">🧩</span>
-          <div>
-            <h1 class="header__title">Ghép Hình</h1>
-            <p class="header__subtitle">Kéo giữa để di chuyển · kéo đầu hoặc đuôi mảnh để xoay</p>
-          </div>
-        </div>
-        <div class="timer" id="timer" aria-live="polite">
-          <span class="timer__label">Thời gian</span>
-          <span class="timer__value" id="timerValue">00:00</span>
-        </div>
-      </header>
-
-      <!-- Sân chơi full-width: khay trái | khung đen | khay phải -->
-      <main class="play-arena" id="playSurface">
-        <div class="drag-layer" id="dragLayer" aria-hidden="true"></div>
-
-        <aside class="side-tray side-tray--left" id="trayLeft" aria-label="Mảnh ghép bên trái"></aside>
-
-        <section class="board-section" aria-label="Khu vực ghép hình">
-          <div class="puzzle-board" id="puzzleBoard">
-            <img
-              class="hint-image"
-              id="hintImage"
-              src="caudo1_0005_khoa.png"
-              alt="Gợi ý hình hoàn chỉnh"
-              draggable="false"
-            >
-          </div>
-        </section>
-
-        <aside class="side-tray side-tray--right" id="trayRight" aria-label="Mảnh ghép bên phải"></aside>
-      </main>
-
-      <footer class="controls">
-        <a class="btn btn--secondary" href="anh-game-2/index.html">Câu 2 →</a>
-        <button class="btn btn--primary" id="btnRestart" type="button">
-          <span aria-hidden="true">↺</span> Chơi lại
-        </button>
-        <button class="btn btn--secondary" id="btnHint" type="button">
-          <span aria-hidden="true">💡</span> Gợi ý
-        </button>
-      </footer>
-    </div>
-
-    <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+<body class="dashboard-body">
+  <div class="flag-star-bg" aria-hidden="true"></div>
+  <div class="animated-bg" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+  <main class="dashboard-shell">
+    <section class="hero-panel">
+      <h1>Hoạt động lớp học</h1>
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="#games">Xem danh sách game</a>
+        <button class="btn btn--secondary" id="howToPlayToggle" type="button" aria-haspopup="dialog" aria-controls="howToPlayModal">Cách chơi</button>
+        <a class="btn btn--secondary" id="round2LocalLink" href="/vong-2">Mở Round 2</a>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
+    <div class="modal-backdrop" id="howToPlayModal" role="dialog" aria-modal="true" aria-label="Cách chơi" hidden>
+      <section class="how-to-play-modal">
+        <button class="modal-close" id="howToPlayClose" type="button" aria-label="Đóng cách chơi">×</button>
+        <div class="section-heading">
+          <p class="eyebrow">Hướng dẫn</p>
+        </div>
+        <div class="round-flow">
+          <article>
+            <span>Round 1</span>
+            <strong>9 game ghép hình</strong>
+            <p>Kéo các mảnh vào đúng vị trí để tìm ra các ký tự bí mật. Ghi lại đủ 9 mảnh chữ sau khi các nhóm hoàn thành.</p>
+          </article>
+          <article>
+            <span>Round 2</span>
+            <strong>Giải mã câu nói</strong>
+            <p>Gộp 9 mảnh chữ và sắp xếp thành câu nói của Bác Hồ trên trang Round 2.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section class="round-flow round-flow--summary" aria-label="Tóm tắt 2 round">
+      <article>
+        <span>Round 1</span>
+        <strong>Thu thập mảnh chữ</strong>
+      </article>
+      <article>
+        <span>Round 2</span>
+        <strong>Giải mã câu nói</strong>
+      </article>
+    </section>
+
+    <section class="dashboard-section" id="games">
+      <div class="section-heading">
+        <p class="eyebrow">Danh sách game</p>
+        <h2>9 thử thách</h2>
+      </div>
+      <div class="game-grid" id="gameGrid"></div>
+    </section>
+  </main>
+
+  <script src="data/games.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

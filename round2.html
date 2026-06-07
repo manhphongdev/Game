@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Round 2 - Giải Mã Câu Nói Của Bác Hồ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+  <div class="flag-star-bg" aria-hidden="true"></div>
+  <div class="animated-bg" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <main class="round2-shell">
+    <section class="launch-panel">
+      <p class="eyebrow">Round 2</p>
+      <h1>Giải mã câu nói của Bác Hồ</h1>
+      <p>Sắp xếp các mảnh chữ mà 9 nhóm thu được sau Round 1 để tạo thành câu nói hoàn chỉnh.</p>
+      <div class="launch-actions">
+        <a class="btn btn--secondary" href="/">Về dashboard</a>
+        <button class="btn btn--secondary" id="resetRound2" type="button">Làm lại</button>
+      </div>
+    </section>
+
+    <section class="round2-board" aria-label="Khu vực sắp xếp câu nói">
+      <div class="section-heading">
+        <p class="eyebrow">Khu vực đáp án</p>
+        <h2>Chọn các mảnh chữ theo đúng thứ tự</h2>
+      </div>
+      <div class="answer-slots" id="answerSlots"></div>
+      <div class="round2-actions">
+        <button class="btn btn--primary" id="checkAnswer" type="button">Kiểm tra đáp án</button>
+        <button class="btn btn--secondary" id="undoToken" type="button">Xóa mảnh cuối</button>
+      </div>
+      <p class="round2-message" id="round2Message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="round2-board" aria-label="Danh sách mảnh chữ">
+      <div class="section-heading">
+        <p class="eyebrow">9 mảnh chữ</p>
+        <h2>Kho mảnh chữ Round 1</h2>
+      </div>
+      <div class="token-bank" id="tokenBank"></div>
+    </section>
+  </main>
+
+  <script src="data/games.js"></script>
+  <script src="round2.js"></script>
+</body>
+</html>
