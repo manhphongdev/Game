@@ -34,6 +34,9 @@ const toast = document.getElementById('toast');
 const btnRestart = document.getElementById('btnRestart');
 const gameTitle = document.getElementById('gameTitle');
 const boardBase = document.getElementById('boardBase');
+const header = document.querySelector('.header');
+const timer = document.getElementById('timer');
+const footerControls = document.querySelector('.controls');
 
 let boardWidth = 0;
 let boardHeight = 0;
@@ -44,11 +47,14 @@ let timerInterval = null;
 let elapsedSeconds = 0;
 let toastTimeout = null;
 let activeDrag = null;
+let hintModal = null;
 
 async function initGame() {
   try {
     document.title = PUZZLE_CONFIG.title;
     if (gameTitle) gameTitle.textContent = PUZZLE_CONFIG.title;
+    setupHeaderActions();
+    setupHintButton();
     if (boardBase) {
       if (FIXED_LAYER) {
         boardBase.hidden = false;
@@ -338,6 +344,65 @@ function restartGame() {
   requestAnimationFrame(() => scatterPiecesRandomly());
   resetTimer();
   hideToast();
+}
+
+function setupHintButton() {
+  if (!PUZZLE_CONFIG.hint || !header) return;
+
+  const headerActions = document.querySelector('.header__actions');
+  const button = document.createElement('button');
+  button.className = 'btn btn--secondary header__hint';
+  button.type = 'button';
+  button.textContent = 'Gợi ý';
+  button.addEventListener('click', showHintModal);
+  (headerActions || header).appendChild(button);
+}
+
+function setupHeaderActions() {
+  if (!header || !footerControls) return;
+
+  const headerActions = document.createElement('div');
+  headerActions.className = 'header__actions';
+
+  Array.from(footerControls.children).forEach((child) => {
+    headerActions.appendChild(child);
+  });
+
+  header.insertBefore(headerActions, timer);
+  footerControls.hidden = true;
+}
+
+function showHintModal() {
+  if (!hintModal) {
+    hintModal = document.createElement('div');
+    hintModal.className = 'hint-modal-backdrop';
+    hintModal.innerHTML = `
+      <section class="hint-modal" role="dialog" aria-modal="true" aria-label="Gợi ý">
+        <button class="hint-modal__close" type="button" aria-label="Đóng gợi ý">×</button>
+        <strong></strong>
+      </section>
+    `;
+
+    hintModal.addEventListener('click', (event) => {
+      if (event.target === hintModal || event.target.classList.contains('hint-modal__close')) {
+        hideHintModal();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !hintModal.hidden) hideHintModal();
+    });
+
+    document.body.appendChild(hintModal);
+  }
+
+  hintModal.querySelector('strong').textContent = PUZZLE_CONFIG.hint;
+  hintModal.hidden = false;
+  hintModal.querySelector('.hint-modal__close').focus();
+}
+
+function hideHintModal() {
+  if (hintModal) hintModal.hidden = true;
 }
 
 function showGame() {

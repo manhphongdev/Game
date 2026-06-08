@@ -18,35 +18,31 @@
     <span></span>
   </div>
   <main class="round2-shell">
-    <section class="launch-panel">
-      <p class="eyebrow">Round 2</p>
-      <h1>Giải mã câu nói của Bác Hồ</h1>
-      <p>Sắp xếp các mảnh chữ mà 9 nhóm thu được sau Round 1 để tạo thành câu nói hoàn chỉnh.</p>
-      <div class="launch-actions">
-        <a class="btn btn--secondary" href="/">Về dashboard</a>
-        <button class="btn btn--secondary" id="resetRound2" type="button">Làm lại</button>
-      </div>
-    </section>
-
     <section class="round2-board" aria-label="Khu vực sắp xếp câu nói">
       <div class="section-heading">
-        <p class="eyebrow">Khu vực đáp án</p>
-        <h2>Chọn các mảnh chữ theo đúng thứ tự</h2>
+        <p class="eyebrow">Mật thư</p>
       </div>
-      <div class="answer-slots" id="answerSlots"></div>
+      <div class="letter-answer" id="letterAnswer"></div>
       <div class="round2-actions">
+        <a class="btn btn--secondary" href="/">Về dashboard</a>
+        <button class="btn btn--secondary" id="resetRound2" type="button">Làm lại</button>
+        <button class="btn btn--secondary" id="showAnswer" type="button">Hiển thị đáp án</button>
         <button class="btn btn--primary" id="checkAnswer" type="button">Kiểm tra đáp án</button>
-        <button class="btn btn--secondary" id="undoToken" type="button">Xóa mảnh cuối</button>
+        <button class="btn btn--secondary" id="undoToken" type="button">Xóa ký tự cuối</button>
       </div>
       <p class="round2-message" id="round2Message" role="status" aria-live="polite"></p>
     </section>
 
-    <section class="round2-board" aria-label="Danh sách mảnh chữ">
+    <section class="round2-board" aria-label="Khu mở mã">
       <div class="section-heading">
-        <p class="eyebrow">9 mảnh chữ</p>
-        <h2>Kho mảnh chữ Round 1</h2>
+        <p class="eyebrow">Mã Round 1</p>
       </div>
-      <div class="token-bank" id="tokenBank"></div>
+      <div class="code-controls" id="codeControls"></div>
+      <div class="revealed-codes" id="revealedCodes" aria-label="Mã đã mở"></div>
+      <div class="section-heading section-heading--compact">
+        <p class="eyebrow">Ký tự khả dụng</p>
+      </div>
+      <div class="letter-bank" id="letterBank"></div>
     </section>
   </main>
 

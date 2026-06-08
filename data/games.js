@@ -7,7 +7,7 @@ const GAME_CATALOG = [
     status: 'ready',
     route: '/thu-thach-1.html',
     launchUrl: '/thu-thach-1.html',
-    token: 'QUÝ',
+    token: 'DUO',
   },
   {
     id: 'game-2',
@@ -17,7 +17,7 @@ const GAME_CATALOG = [
     status: 'ready',
     route: '/thu-thach-2.html',
     launchUrl: '/thu-thach-2.html',
-    token: 'ĐỘC',
+    token: 'CNTO',
   },
   {
     id: 'game-3',
@@ -27,7 +27,7 @@ const GAME_CATALOG = [
     status: 'ready',
     route: '/thu-thach-3.html',
     launchUrl: '/thu-thach-3.html',
-    token: 'KHÔNG',
+    token: 'NGU',
   },
   {
     id: 'game-4',
@@ -37,7 +37,7 @@ const GAME_CATALOG = [
     status: 'ready',
     route: '/thu-thach-4.html',
     launchUrl: '/thu-thach-4.html',
-    token: 'TỰ',
+    token: 'AMO',
   },
   {
     id: 'game-5',
@@ -47,7 +47,7 @@ const GAME_CATALOG = [
     status: 'ready',
     route: '/thu-thach-5.html',
     launchUrl: '/thu-thach-5.html',
-    token: 'CÓ',
+    token: 'NTE',
   },
   {
     id: 'game-6',
@@ -57,7 +57,7 @@ const GAME_CATALOG = [
     status: 'ready',
     route: '/thu-thach-6.html',
     launchUrl: '/thu-thach-6.html',
-    token: 'HƠN',
+    token: 'GAN',
   },
   {
     id: 'game-7',
@@ -67,7 +67,7 @@ const GAME_CATALOG = [
     status: 'ready',
     route: '/thu-thach-7.html',
     launchUrl: '/thu-thach-7.html',
-    token: 'DO',
+    token: 'OAN',
   },
   {
     id: 'game-8',
@@ -77,7 +77,7 @@ const GAME_CATALOG = [
     status: 'ready',
     route: '/thu-thach-8.html',
     launchUrl: '/thu-thach-8.html',
-    token: 'GÌ',
+    token: 'NYO',
   },
   {
     id: 'game-9',
@@ -87,15 +87,17 @@ const GAME_CATALOG = [
     status: 'ready',
     route: '/thu-thach-9.html',
     launchUrl: '/thu-thach-9.html',
-    token: 'LẬP',
+    token: 'LNC',
   },
 ];
 
 const ROUND_TWO = {
   title: 'Round 2 - Giải mã câu nói của Bác Hồ',
-  instruction: 'Sắp xếp 9 mảnh chữ thu được ở Round 1 để tạo thành câu nói hoàn chỉnh.',
-  tokenCount: 9,
-  answerHash: '796b557b030759fd3171c1c974d086e4e54994fbfe731e7f7505d7fac66ec8d4',
+  instruction: 'Mở các mã thu được ở Round 1, dùng ký tự trong mã để giải câu nói của Bác.',
+  answer: 'DAN TA CO MOT LONG NONG NAN YEU NUOC',
+  displayAnswer: 'Dân ta có một lòng nồng nàn yêu nước.',
+  wordPattern: [3, 2, 2, 3, 4, 4, 3, 3, 4],
+  codes: ['DUO', 'CNTO', 'NGU', 'AMO', 'NTE', 'GAN', 'OAN', 'NYO', 'LNC'],
 };
 
 window.GAME_CATALOG = GAME_CATALOG;
