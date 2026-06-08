@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Mảnh Ghép Tổ Quốc Số</title>
+  <title>Ghép Hình 1</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -21,8 +21,8 @@
         <div class="header__brand">
           <span class="header__icon" aria-hidden="true">🧩</span>
           <div>
-            <h1 class="header__title">Mảnh Ghép Tổ Quốc Số</h1>
-            <p class="header__subtitle">Kéo giữa để di chuyển · kéo đầu hoặc đuôi mảnh để xoay</p>
+            <h1 class="header__title" id="gameTitle">Ghép Hình 1</h1>
+            <p class="header__subtitle">Kéo các mảnh lên lớp nền cố định và căn chỉnh bằng mắt</p>
           </div>
         </div>
         <div class="timer" id="timer" aria-live="polite">
@@ -39,10 +39,10 @@
         <section class="board-section" aria-label="Khu vực ghép hình">
           <div class="puzzle-board" id="puzzleBoard">
             <img
-              class="hint-image"
-              id="hintImage"
-              src="caudo1_0005_khoa.png"
-              alt="Gợi ý hình hoàn chỉnh"
+              class="board-base"
+              id="boardBase"
+              src="/anh-game/cau1/caudo1_0003_Layer-1.png"
+              alt="Lớp nền cố định"
               draggable="false"
             >
           </div>
@@ -53,12 +53,8 @@
 
       <footer class="controls">
         <a class="btn btn--secondary" href="/">← Dashboard</a>
-        <a class="btn btn--secondary" href="/thu-thach-2">Thử thách 2 →</a>
         <button class="btn btn--primary" id="btnRestart" type="button">
           <span aria-hidden="true">↺</span> Chơi lại
-        </button>
-        <button class="btn btn--secondary" id="btnHint" type="button">
-          <span aria-hidden="true">💡</span> Gợi ý
         </button>
       </footer>
     </div>
@@ -68,6 +64,18 @@
 
   <script src="data/games.js"></script>
   <script src="round1-reveal.js"></script>
+  <script>
+    window.PUZZLE_CONFIG = {
+      title: 'Ghép Hình 1',
+      assetBase: '/anh-game/cau1/',
+      fixedLayer: 'caudo1_0003_Layer-1.png',
+      pieces: [
+        'caudo1_0000_4.png',
+        'caudo1_0001_3.png',
+        'caudo1_0002_2.png',
+      ],
+    };
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Ghép Hình 4</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="loading-screen" id="loadingScreen"><div class="loading-spinner"></div><p class="loading-text">Đang tải câu đố...</p></div>
+    <div class="game-wrapper hidden" id="gameWrapper">
+      <header class="header"><div class="header__brand"><span class="header__icon" aria-hidden="true">🧩</span><div><h1 class="header__title" id="gameTitle">Ghép Hình 4</h1><p class="header__subtitle">Kéo các mảnh lên lớp nền cố định và căn chỉnh bằng mắt</p></div></div><div class="timer" id="timer" aria-live="polite"><span class="timer__label">Thời gian</span><span class="timer__value" id="timerValue">00:00</span></div></header>
+      <main class="play-arena" id="playSurface"><div class="drag-layer" id="dragLayer" aria-hidden="true"></div><aside class="side-tray side-tray--left" id="trayLeft" aria-label="Mảnh ghép bên trái"></aside><section class="board-section" aria-label="Khu vực ghép hình"><div class="puzzle-board" id="puzzleBoard"><img class="board-base" id="boardBase" src="/anh-game/cau4/Illustration_0001_khoa.png" alt="Lớp nền cố định" draggable="false"></div></section><aside class="side-tray side-tray--right" id="trayRight" aria-label="Mảnh ghép bên phải"></aside></main>
+      <footer class="controls"><a class="btn btn--secondary" href="/">← Dashboard</a><button class="btn btn--primary" id="btnRestart" type="button"><span aria-hidden="true">↺</span> Chơi lại</button></footer>
+    </div>
+    <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+  </div>
+  <script src="data/games.js"></script><script src="round1-reveal.js"></script>
+  <script>window.PUZZLE_CONFIG={title:'Ghép Hình 4',assetBase:'/anh-game/cau4/',fixedLayer:'Illustration_0001_khoa.png',pieces:['Illustration_0000_1.png']};</script>
+  <script src="script.js"></script>
+</body>
+</html>
