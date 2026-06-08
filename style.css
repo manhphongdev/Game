@@ -40,6 +40,10 @@ body {
   overflow-x: hidden;
 }
 
+body.challenge-5 {
+  --board-black: #ff5adc;
+}
+
 .hidden {
   display: none !important;
 }
@@ -150,7 +154,7 @@ body {
   text-shadow: 0 0 20px var(--accent-glow);
 }
 
-/* ===== Sân chơi full-width, nền đen ===== */
+/* ===== Sân chơi full-width, nền đỏ ===== */
 .play-arena {
   position: relative;
   flex: 1;
@@ -182,14 +186,14 @@ body {
 }
 
 .side-tray--left {
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .side-tray--right {
-  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 1px solid rgba(255, 255, 255, 0.22);
 }
 
-/* Khung ghép giữa — đen full, viền nét đứt */
+/* Khung ghép giữa — nền đỏ, viền nét đứt */
 .board-section {
   flex: 0 0 auto;
   display: flex;
@@ -202,11 +206,11 @@ body {
 .puzzle-board {
   position: relative;
   background: var(--board-black);
-  border: 2px dashed rgba(255, 255, 255, 0.18);
+  border: 2px dashed rgba(255, 255, 255, 0.42);
   border-radius: 4px;
   overflow: hidden;
   touch-action: none;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
 }
 
 .hint-image {

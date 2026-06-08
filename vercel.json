@@ -6,9 +6,9 @@
     { "source": "/thu-thach-4", "destination": "/thu-thach-4.html" },
     { "source": "/thu-thach-5", "destination": "/thu-thach-5.html" },
     { "source": "/thu-thach-6", "destination": "/thu-thach-6.html" },
-    { "source": "/thu-thach-7", "destination": "/game.html?game=game-7" },
-    { "source": "/thu-thach-8", "destination": "/game.html?game=game-8" },
-    { "source": "/thu-thach-9", "destination": "/game.html?game=game-9" },
+    { "source": "/thu-thach-7", "destination": "/thu-thach-7.html" },
+    { "source": "/thu-thach-8", "destination": "/thu-thach-8.html" },
+    { "source": "/thu-thach-9", "destination": "/thu-thach-9.html" },
     { "source": "/vong-2", "destination": "/round2.html" }
   ]
 }
