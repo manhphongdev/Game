@@ -11,7 +11,8 @@ const DEFAULT_PUZZLE_CONFIG = {
 
 const PUZZLE_CONFIG = window.PUZZLE_CONFIG || DEFAULT_PUZZLE_CONFIG;
 const ASSET_BASE = PUZZLE_CONFIG.assetBase;
-const FIXED_LAYER = `${ASSET_BASE}${PUZZLE_CONFIG.fixedLayer}`;
+const FIXED_LAYER = PUZZLE_CONFIG.fixedLayer ? `${ASSET_BASE}${PUZZLE_CONFIG.fixedLayer}` : '';
+const BOARD_LAYER = `${ASSET_BASE}${PUZZLE_CONFIG.boardLayer || PUZZLE_CONFIG.fixedLayer || PUZZLE_CONFIG.pieces[0]}`;
 
 const PUZZLE_PIECES = PUZZLE_CONFIG.pieces.map((fileName, index) => ({
   id: `piece-${index}`,
@@ -48,9 +49,17 @@ async function initGame() {
   try {
     document.title = PUZZLE_CONFIG.title;
     if (gameTitle) gameTitle.textContent = PUZZLE_CONFIG.title;
-    if (boardBase) boardBase.src = FIXED_LAYER;
+    if (boardBase) {
+      if (FIXED_LAYER) {
+        boardBase.hidden = false;
+        boardBase.src = FIXED_LAYER;
+      } else {
+        boardBase.hidden = true;
+        boardBase.removeAttribute('src');
+      }
+    }
 
-    const baseImg = await loadImage(FIXED_LAYER);
+    const baseImg = await loadImage(BOARD_LAYER);
     const pieceImages = await Promise.all(
       PUZZLE_PIECES.map((p) => loadImage(p.src).then((img) => ({ ...p, img })))
     );

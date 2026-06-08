@@ -1,4 +1,6 @@
 (function () {
+  return;
+
   const params = new URLSearchParams(window.location.search);
   const cleanPath = window.location.pathname.replace(/\/$/, '');
   const gameId = params.get('game');
