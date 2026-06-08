@@ -13,7 +13,6 @@ if (!['localhost', '127.0.0.1'].includes(window.location.hostname)) {
     <main class="round2-shell">
       <section class="launch-panel">
         <p class="eyebrow">Local only</p>
-        <h1>Round 2 chỉ chạy trên localhost</h1>
         <p>Hãy mở trang này bằng server local để sử dụng phần giải mã.</p>
         <div class="launch-actions">
           <a class="btn btn--secondary" href="/">Về dashboard</a>
