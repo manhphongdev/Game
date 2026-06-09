@@ -2,7 +2,7 @@ const GAME_CATALOG = [
   {
     id: 'game-1',
     title: 'Thử thách 1',
-    points: 100,
+    points: 0.2,
     difficulty: 'Dễ',
     status: 'ready',
     route: '/thu-thach-1.html',
@@ -12,7 +12,7 @@ const GAME_CATALOG = [
   {
     id: 'game-2',
     title: 'Thử thách 2',
-    points: 60,
+    points: 0.4,
     difficulty: 'Trung bình',
     status: 'ready',
     route: '/thu-thach-2.html',
@@ -22,7 +22,7 @@ const GAME_CATALOG = [
   {
     id: 'game-3',
     title: 'Thử thách 3',
-    points: 80,
+    points: 0.4,
     difficulty: 'Trung bình',
     status: 'ready',
     route: '/thu-thach-3.html',
@@ -32,7 +32,7 @@ const GAME_CATALOG = [
   {
     id: 'game-4',
     title: 'Thử thách 4',
-    points: 120,
+    points: 0.6,
     difficulty: 'Khó',
     status: 'ready',
     route: '/thu-thach-4.html',
@@ -42,7 +42,7 @@ const GAME_CATALOG = [
   {
     id: 'game-5',
     title: 'Thử thách 5',
-    points: 90,
+    points: 0.6,
     difficulty: 'Khó',
     status: 'ready',
     route: '/thu-thach-5.html',
@@ -52,7 +52,7 @@ const GAME_CATALOG = [
   {
     id: 'game-6',
     title: 'Thử thách 6',
-    points: 70,
+    points: 0.6,
     difficulty: 'Khó',
     status: 'ready',
     route: '/thu-thach-6.html',
@@ -62,7 +62,7 @@ const GAME_CATALOG = [
   {
     id: 'game-7',
     title: 'Thử thách 7',
-    points: 110,
+    points: 0.4,
     difficulty: 'Trung bình',
     status: 'ready',
     route: '/thu-thach-7.html',
@@ -72,7 +72,7 @@ const GAME_CATALOG = [
   {
     id: 'game-8',
     title: 'Thử thách 8',
-    points: 85,
+    points: 0.4,
     difficulty: 'Trung bình',
     status: 'ready',
     route: '/thu-thach-8.html',
@@ -82,7 +82,7 @@ const GAME_CATALOG = [
   {
     id: 'game-9',
     title: 'Thử thách 9',
-    points: 130,
+    points: 0.2,
     difficulty: 'Dễ',
     status: 'ready',
     route: '/thu-thach-9.html',
